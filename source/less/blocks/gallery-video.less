@@ -1,9 +1,6 @@
 .gallery-video {
   padding-top: 32px;
   margin-bottom: 49px;
-  border-top: 1px solid var(--basic-grey);
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .gallery-video__title {
@@ -12,8 +9,6 @@
   line-height: 26px;
   margin-left: 28px;
   margin-right: 28px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .gallery-video__description {
@@ -22,36 +17,42 @@
   line-height: 24px;
   margin-left: 28px;
   margin-right: 28px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
-.gallery-video__videopannel {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-}
+.gallery-video__videopannel {}
 
-.gallery-video__player {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-}
+.gallery-video__player {}
 
 .gallery-video__list {
   .list-reset();
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: var(--special-extra-grey);
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+  background-color: @special-extra-grey;
 }
 
-.gallery-video__item {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-}
+.gallery-video__item {}
 
 .gallery-video__button {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+@media (min-width: @tablet-width) {
+  .gallery-video__player {
+    position: relative;
+  }
+
+  .gallery-video__list {
+    position: absolute;
+    bottom: 0;
+    left: 270px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery-video__list {
+    left: 350px;
+  }
 }
