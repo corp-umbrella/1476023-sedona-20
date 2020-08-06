@@ -2,15 +2,11 @@
   margin-bottom: 48px;
   padding-left: 20px;
   padding-right: 20px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .filter-form__item {
   padding-top: 20px;
   border: none;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .filter-form__legend {
@@ -18,9 +14,6 @@
   font-size: 18px;
   line-height: 26px;
   padding-top: 20px;
-  border-top: 1px solid var(--basic-grey);
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .filter-form__row {
@@ -28,8 +21,6 @@
   flex-wrap: wrap;
   justify-content: start;
   margin-bottom: 20px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .filter-form__label {
@@ -38,15 +29,13 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .filter-form__input {
   flex-grow: 1;
   padding-top: 18px;
   padding-bottom: 14px;
-  background-color: var(--special-extra-grey);
+  background-color: @special-extra-grey;
   border: none;
   &::placeholder {
     padding-left: 22px;
@@ -54,10 +43,13 @@
     font-size: 18px;
     line-height: 26px;
     text-transform: none;
-    color: var(--basic-black);
+    color: @basic-black;
   }
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+}
+
+.filter-form__footer {
+  width: 100%;
+  order: 6;
 }
 
 .filter-form__button {
@@ -68,10 +60,65 @@
   line-height: 26px;
   padding-top: 19px;
   padding-bottom: 14px;
-  span{
-    margin-right: 30px;
-    margin-left: 30px;
+    span {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+}
+
+.filter-form__rule {
+  display: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+@media (min-width: @tablet-width) {
+  .filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 60px;
+    margin-right: 60px;
   }
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+
+  .filter-form__legend--active {
+    display: flex;
+    align-items: center;
+  }
+
+  .filter-form__legend--active::before,
+  .filter-form__legend--active::after {
+    content: "";
+    width: 123px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 1px;
+    background: @special-light-grey;
+  }
+
+  .filter-form__legend--active::before {
+    margin-right: 25px;
+  }
+
+  .filter-form__legend--active::after {
+    margin-left: 25px;
+  }
+
+  .filter-form__footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter-form__rule {
+    display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .filter-form {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
 }

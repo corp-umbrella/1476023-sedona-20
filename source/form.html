@@ -41,7 +41,7 @@
       </div>
     </nav>
     <a class="main-nav__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="Седона">
+      <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
     </a>
   </header>
   <main class="page__main">
@@ -52,11 +52,7 @@
       <section class="main-intro__image intro-image">
         <div class="intro-image__title">
           <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
-          <img src="img/text-sedona.svg" width="163" height="35" alt="Sedona">
         </div>
-        <!--
-        <p class="intro-image__description">"Because the Grand Canyon sucks!"</p>
-        -->
       </section>
       <h3 class="main-intro__title">
         Оставьте свой отзыв
@@ -82,8 +78,8 @@
             <label class="filter-form__label" for="appointment-surname">
               Фамилия*:
             </label>
-            <input class="filter-form__input form-name__input" id="appointment-surname" type="text" name="surname" required
-              placeholder="Иванов">
+            <input class="filter-form__input form-name__input" id="appointment-surname" type="text" name="surname"
+              required placeholder="Иванов">
           </div>
           <div class="filter-form__row form-name__item">
             <label class="filter-form__label" for="appointment-patronymic">
@@ -94,22 +90,22 @@
           </div>
         </fieldset>
         <fieldset class="filter-form__item form-contacts">
-          <legend class="filter-form__legend">
+          <legend class="filter-form__legend filter-form__legend--active">
             Контактная информация:
           </legend>
           <div class="filter-form__row form-contacts__item">
             <label class="filter-form__label form-contacts__label" for="appointment-tel">
               Контактный телефон*:
             </label>
-            <input class="filter-form__input form-contacts__input" id="appointment-tel" type="text" name="phone" required
-              placeholder="Введите телефон">
+            <input class="filter-form__input form-contacts__input" id="appointment-tel" type="text" name="phone"
+              required placeholder="Введите телефон">
           </div>
           <div class="filter-form__row form-contacts__item">
             <label class="filter-form__label form-contacts__label" for="appointment-email">
               Электронная почта*:
             </label>
-            <input class="filter-form__input form-contacts__input" id="appointment-email" type="text" name="email" required
-              placeholder="Введите e-mail">
+            <input class="filter-form__input form-contacts__input" id="appointment-email" type="text" name="email"
+              required placeholder="Введите e-mail">
           </div>
         </fieldset>
         <fieldset class="filter-form__item form-impression">
@@ -118,22 +114,22 @@
           </legend>
           <ul class="form-impression__list">
             <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression" value="positive"
-                id="filter-positive" checked>
+              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+                value="positive" id="filter-positive" checked>
               <label class="filter-form__label form-impression__label" for="filter-positive">
                 Скорее положительное
               </label>
             </li>
             <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression" value="negative"
-                id="filter-negative">
+              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+                value="negative" id="filter-negative">
               <label class="filter-form__label form-impression__label" for="filter-negative">
                 Скорее отрицательное
               </label>
             </li>
             <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression" value="unknown"
-                id="filter-unknown">
+              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+                value="unknown" id="filter-unknown">
               <label class="filter-form__label form-impression__label" for="filter-unknown">
                 Затрудняюсь ответить
               </label>
@@ -141,27 +137,27 @@
           </ul>
         </fieldset>
         <fieldset class="filter-form__item form-attractions">
-          <legend class="filter-form__legend">
+          <legend class="filter-form__legend filter-form__legend--active">
             Посещенные достопримечательности:
           </legend>
           <ul class="form-attractions__list">
             <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox" name="devils-bridge"
-                id="filter-devils-bridge" checked>
+              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
+                name="devils-bridge" id="filter-devils-bridge" checked>
               <label class="filter-form__label form-attractions__label" for="filter-devils-bridge">
                 Мост Дьявола
               </label>
             </li>
             <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox" name="bell-mountain"
-                id="filter-bell-mountain" checked>
+              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
+                name="bell-mountain" id="filter-bell-mountain" checked>
               <label class="filter-form__label form-attractions__label" for="filter-bell-mountain">
                 Гора-Колокол
               </label>
             </li>
             <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox" name="slide-park"
-                id="filter-slide-park" checked>
+              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
+                name="slide-park" id="filter-slide-park" checked>
               <label class="filter-form__label form-attractions__label" for="filter-slide-park">
                 Слайд-парк
               </label>
@@ -176,7 +172,7 @@
           </ul>
         </fieldset>
         <fieldset class="filter-form__item form-emotions">
-          <legend class="filter-form__legend">
+          <legend class="filter-form__legend filter-form__legend--active">
             Опишите свои эмоции:
           </legend>
           <div class="filter-form__row form-emotions__item">
@@ -184,11 +180,16 @@
               placeholder="Опишите подробно все свои восторги">
           </div>
         </fieldset>
-        <button class="filter-form__button button" type="submit">
-          <span>
-            Отправить отзыв
+        <div class="filter-form__footer">
+          <button class="filter-form__button button" type="submit">
+            <span>
+              Отправить отзыв
+            </span>
+          </button>
+          <span class="filter-form__rule">
+            * - Обязательные поля
           </span>
-        </button>
+        </div>
       </form>
     </section>
   </main>
@@ -200,19 +201,27 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Седона в Твиттере</a>
+            <a class="social__link social__link--twitter" href="#" aria-label="Седона в Твиттере">
+              <img src="img/icon-twitter.svg">
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Седона в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#" aria-label="Седона в Фейсбуке">
+              <img src="img/icon-facebook.svg">
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Седона в Ютубе</a>
+            <a class="social__link social__link--youtube" href="#" aria-label="Седона в Ютубе">
+              <img src="img/icon-youtube.svg">
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <img src="img/logo-htmlacademy.svg">
+        </a>
       </div>
     </div>
   </footer>

@@ -1,14 +1,17 @@
 .form-name {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+  order: 1;
+  width: 100%;
 }
 
-.form-name__item {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+.form-name__item {}
+
+.form-name__input {}
+
+@media (min-width: @tablet-width) {
+  .form-name {
+    order: 2;
+    width: 45%;
+  }
 }
 
-.form-name__input {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-}
+@media (min-width: @desktop-width) {}

@@ -41,7 +41,7 @@
       </div>
     </nav>
     <a class="main-nav__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="Седона">
+      <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
     </a>
   </header>
   <main class="page__main">
@@ -52,11 +52,7 @@
       <section class="main-intro__image intro-image">
         <div class="intro-image__title">
           <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
-          <img src="img/text-sedona.svg" width="163" height="35" alt="Sedona">
         </div>
-        <!--
-        <p class="intro-image__description">"Because the Grand Canyon sucks!"</p>
-        -->
       </section>
       <h3 class="main-intro__title">
         Фото и видео
@@ -68,53 +64,69 @@
     <section class="page__gallery gallery">
       <div class="gallery__wrapper">
         <ul class="gallery__list">
-          <li class="gallery__item">
-            <h4 class="gallery__title">
-              Неродные просторы
-            </h4>
-            <p class="gallery__description">
-              Автор фото: Борис
-            </p>
+          <li class="gallery__item gallery__item--active">
             <img src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
-            <p class="gallery__likes">
-              1350
-            </p>
+            <div class="gallery__text">
+              <div class="gallery__info">
+                <h4 class="gallery__title">
+                  Неродные просторы
+                </h4>
+                <p class="gallery__description">
+                  Автор фото: Борис
+                </p>
+              </div>
+              <button class="gallery__likes">
+                1350
+              </button>
+            </div>
           </li>
           <li class="gallery__item">
-            <h4 class="gallery__title">
-              Местная растительность
-            </h4>
-            <p class="gallery__description">
-              Автор фото: Сергей
-            </p>
             <img src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
-            <p class="gallery__likes">
-              143
-            </p>
+            <div class="gallery__text">
+              <div class="gallery__info">
+                <h4 class="gallery__title">
+                  Местная растительность
+                </h4>
+                <p class="gallery__description">
+                  Автор фото: Сергей
+                </p>
+              </div>
+              <button class="gallery__likes">
+                143
+              </button>
+            </div>
           </li>
           <li class="gallery__item">
-            <h4 class="gallery__title">
-              Дорога на север
-            </h4>
-            <p class="gallery__description">
-              Автор фото: Петр
-            </p>
             <img src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
-            <p class="gallery__likes">
-              96
-            </p>
+            <div class="gallery__text gallery__text--grey">
+              <div class="gallery__info">
+                <h4 class="gallery__title">
+                  Дорога на север
+                </h4>
+                <p class="gallery__description">
+                  Автор фото: Петр
+                </p>
+              </div>
+              <button class="gallery__likes">
+                96
+              </button>
+            </div>
           </li>
           <li class="gallery__item">
-            <h4 class="gallery__title">
-              Мост Дьявола
-            </h4>
-            <p class="gallery__description">
-              Автор фото: Антон
-            </p>
             <img src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола">
-            <p class="gallery__likes">
-              254
-            </p>
+            <div class="gallery__text">
+              <div class="gallery__info">
+                <h4 class="gallery__title">
+                  Мост Дьявола
+                </h4>
+                <p class="gallery__description">
+                  Автор фото: Антон
+                </p>
+              </div>
+              <button class="gallery__likes">
+                254
+              </button>
+            </div>
           </li>
         </ul>
       </div>
@@ -130,13 +142,19 @@
         <img src="img/video-mobile@1x.jpg" alt="Видео">
         <ul class="gallery-video__list">
           <li class="gallery-video__item">
-            <button class="gallery-video__button" aria-label="repeat"></button>
+            <button class="gallery-video__button" aria-label="repeat">
+              <img src="img/icon-video-replay.svg">
+            </button>
           </li>
           <li class="gallery-video__item">
-            <button class="gallery-video__button" aria-label="comments/no-comments"></button>
+            <button class="gallery-video__button" aria-label="comments/no-comments">
+              <img src="img/icon-video-subtitles.svg">
+            </button>
           </li>
           <li class="gallery-video__item">
-            <button class="gallery-video__button" aria-label="expand/no-expand"></button>
+            <button class="gallery-video__button" aria-label="expand/no-expand">
+              <img src="img/icon-video-fullscreen.svg">
+            </button>
           </li>
         </ul>
       </div>
@@ -155,19 +173,27 @@
       <div class="main-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link social__link--twitter" href="#">Седона в Твиттере</a>
+            <a class="social__link social__link--twitter" href="#" aria-label="Седона в Твиттере">
+              <img src="img/icon-twitter.svg">
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--facebook" href="#">Седона в Фейсбуке</a>
+            <a class="social__link social__link--facebook" href="#" aria-label="Седона в Фейсбуке">
+              <img src="img/icon-facebook.svg">
+            </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="#">Седона в Ютубе</a>
+            <a class="social__link social__link--youtube" href="#" aria-label="Седона в Ютубе">
+              <img src="img/icon-youtube.svg">
+            </a>
           </li>
         </ul>
       </div>
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+          <img src="img/logo-htmlacademy.svg">
+        </a>
       </div>
     </div>
   </footer>

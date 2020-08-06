@@ -1,7 +1,5 @@
 .social {
   margin-top: 33px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .social__list {
@@ -9,38 +7,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .social__item {
-  display: block;
-  background-color: var(--basic-blue);
+  display: flex;
   width: 46px;
   height: 46px;
+  justify-content: center;
+  align-items: center;
+  background-color: @basic-blue;
   margin-right: 6px;
   &:last-child {
     margin-right: 0;
   }
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
 }
 
 .social__link {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-  &--twitter {
-    @media (max-width: @tablet-width) {}
-    @media (max-width: @desktop-width) {}
-  }
+  /*
+  &--twitter {}
+  &--facebook {}
+  &--youtube {}
+  */
+}
 
-  &--facebook {
-    @media (max-width: @tablet-width) {}
-    @media (max-width: @desktop-width) {}
-  }
-
-  &--youtube {
-    @media (max-width: @tablet-width) {}
-    @media (max-width: @desktop-width) {}
+@media (min-width: @tablet-width) {
+  .social {
+    margin-top: 0;
   }
 }
+
+@media (min-width: @desktop-width) {}

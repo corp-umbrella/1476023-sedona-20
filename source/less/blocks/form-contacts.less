@@ -1,20 +1,26 @@
 .form-contacts {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+  order: 2;
+  width: 100%;
 }
 
-.form-contacts__item {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+.form-contacts__item {}
+
+.form-contacts__label {}
+
+.form-contacts__input {}
+
+@media (min-width: @tablet-width) {
+  .form-contacts__item {
+    flex-direction: column;
+  }
+
+  .form-contacts__label {
+    align-self: left;
+  }
 }
 
-.form-contacts__label {
-  margin-left: 22px;
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
-}
-
-.form-contacts__input {
-  @media (max-width: @tablet-width) {}
-  @media (max-width: @desktop-width) {}
+@media (min-width: @desktop-width) {
+  .form-contacts {
+    order: 3;
+  }
 }
