@@ -5,56 +5,46 @@
 .real-town__list {
   .list-reset();
   text-align: left;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 
 .real-town__item {
   padding-left: 70px;
-  margin-bottom: 26px;
-  &:last-child {
-    margin-bottom: 35px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  background-repeat: no-repeat;
+  background-position-x: 15px;
+  background-position-y: 8px;
+  &--house {
+    background-image: url("../../img/icon-house.svg");
+    background-size: 39px 37px;
   }
-}
 
-.real-town__house {
-  position: relative;
-  &::before {
-    position: absolute;
-    content: url("../../img/icon-house.svg");
-    width: 20px;
-    height: 20px;
-    left: 0px;
+  &--gift {
+    background-image: url("../../img/icon-gift.svg");
+    background-size: 32px 38px;
   }
-}
 
-.real-town__gift {
-  position: relative;
-  &::before {
-    position: absolute;
-    content: url("../../img/icon-gift.svg");
-    width: 20px;
-    height: 20px;
-    left: 0;
-  }
-}
-
-.real-town__burger {
-  position: relative;
-  &::before {
-    position: absolute;
-    content: url("../../img/icon-burger.svg");
-    width: 20px;
-    height: 20px;
-    left: 0;
+  &--burger {
+    background-image: url("../../img/icon-burger.svg");
+    background-size: 40px 35px;
   }
 }
 
 .real-town__title {
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
 }
 
 .real-town__description {
+  margin: 0;
+  margin-top: 28px;
+  padding: 0;
+  padding-right: 20px;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
@@ -62,81 +52,68 @@
 
 @media (min-width: @tablet-width) {
   .real-town__picture {
-    width: 66%;
+    width: 66.66%;
   }
-  
+
   .real-town__list {
-    margin-top: 158px;
+    margin-top: 60px;
   }
 
   .real-town__item {
-  padding-left: 0;
-  text-align: center;
-  }
-
-  .real-town__house {
-    & p {
+    padding-left: 0;
+    text-align: center;
+    padding-top: 90px;
+    background-position-x: center;
+    background-position-y: top;
+    &--house {
       order: 1;
       padding-left: 35px;
       padding-right: 35px;
+      background-image: url("../../img/icon-house.svg");
+      background-size: 75px 72px;
     }
-    &::before {
-      left: 90px;
-      top: -57px;
-    }
-  }
 
-  .real-town__gift {
-    & p {
+    &--gift {
       order: 3;
       padding-left: 30px;
       padding-right: 30px;
+      background-image: url("../../img/icon-gift.svg");
+      background-size: 76px 68px;
     }
-    &::before {
-      left: 90px;
-      top: -57px;
-    }
-  }
 
-  .real-town__burger {
-    & p {
+    &--burger {
       order: 2;
       padding-left: 50px;
       padding-right: 50px;
-    }
-    &::before {
-      left: 90px;
-      top: -57px;
+      background-image: url("../../img/icon-burger.svg");
+      background-size: 64px 75px;
     }
   }
 
   .real-town__title {
     font-size: 21px;
   }
+
+  .real-town__description {
+    padding-right: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
-  .real-town__house {
-    & p {
+  .real-town__item {
+    &--house {
       padding-left: 50px;
       padding-right: 50px;
     }
-    &::before {
-      left: 160px;
-    }
-  }
 
-  .real-town__gift {
-    & p {
+    &--gift {
       padding-left: 100px;
       padding-right: 100px;
     }
-    &::before {
-      left: 160px;
-    }
-  }
 
-  .real-town__burger::before {
-    left: 160px;
+    &--burger {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
   }
 }

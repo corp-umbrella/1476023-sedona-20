@@ -1,6 +1,4 @@
 .gallery {
-  padding-right: 20px;
-  padding-left: 20px;
   text-align: left;
 }
 
@@ -15,7 +13,11 @@
 .gallery__other-photos {}
 
 .gallery__item {
-  margin-top: 22px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 15px;
+  border-top: 1px solid @basic-grey;
 }
 
 .gallery__text {}
@@ -23,25 +25,31 @@
 .gallery__info {}
 
 .gallery__title {
+  margin: 0;
+  padding: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  margin: 0;
 }
 
 .gallery__description {
+  margin: 0;
+  padding: 0;
   text-transform: none;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  margin: 0;
+}
+
+.gallery__rating {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 85px;
 }
 
 .gallery__likes {
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 24px;
-  margin-left: 37px;
   border: none;
   background-color: inherit;
   cursor: pointer;
@@ -49,8 +57,16 @@
   &::before {
     position: absolute;
     content: url("../../img/icon-like.svg");
-    left: -25px;
+    left: 0px;
+    top: -10px;
   }
+}
+
+.gallery__rating-text {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  margin-left: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -65,6 +81,8 @@
   }
 
   .gallery__item {
+    border: none;
+    padding: 0px;
     width: 50%;
     &--active {
       width: 100%;
@@ -80,6 +98,8 @@
     flex-wrap: wrap;
     background-color: @special-extra-grey;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
     &--grey {
       background-color: @special-dark-grey;
     }
@@ -91,19 +111,9 @@
     grid-template-rows: 1fr 1fr;
   }
 
-  .gallery__likes {
-    margin-right: 20px;
+  .gallery__rating {
+    margin-top: 0;
   }
-
-  .gallery-video {
-    margin-left: 60px;
-    margin-right: 60px;
-  }
-
-  .gallery-video__list {
-    background-color: @basic-black;
-  }
-
 }
 
 @media (min-width: @desktop-width) {
@@ -114,18 +124,20 @@
 
   .gallery__item {
     position: relative;
-    width: 33%;
+    width: 33.33%;
     &--active {
       width: 100%;
     }
   }
 
   .gallery__text {
+    color: @basic-white;
+    background-color: fade(@basic-black, 60%);
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 8px;
     &--grey {
-      background-color: @special-extra-grey;
+      background-color: fade(@basic-black, 60%);
     }
   }
 

@@ -1,7 +1,4 @@
-.main-intro {
-  padding-left: 18px;
-  padding-right: 18px;
-}
+.main-intro {}
 
 .main-intro__image {
   min-height: 389px;
@@ -13,34 +10,46 @@
   align-items: center;
 }
 
-.main-intro__title {
+.main-intro__text {
   position: relative;
+  padding-top: 32px;
+  padding-bottom: 30px;
+  &::before {
+    position: absolute;
+    content: url("../../img/bg-intro-triangle-mobile.svg");
+    left: 0px;
+    top: -26px;
+  }
+}
+
+.main-intro__text--index::after {
+  position: absolute;
+  content: url("../../img/bg-triangle.svg");
+  left: 0;
+  bottom: -25px;
+}
+
+.main-intro__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   padding-right: 14px;
   padding-left: 14px;
   margin: 0;
-  &::before {
-    position: absolute;
-    content: url("../../img/bg-intro-triangle-mobile.svg");
-    left: 0;
-    top: -26px;
-  }
+  padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .main-intro__description {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  padding-left: 23px;
+  padding-right: 23px;
   font-size: 14px;
   line-height: 26px;
   font-weight: normal;
-  position: relative;
-}
-
-.main-intro__description--active::after {
-  position: absolute;
-  content: url("../../img/bg-triangle.svg");
-  left: 0;
-  bottom: -50px;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,16 +58,25 @@
     background-image: url("../img/bg-back-tablet@1x.jpg");
   }
 
-  .main-intro__title {
-    font-size: 21px;
+  .main-intro__text {
     &::before {
+      position: absolute;
       content: url("../../img/bg-intro-triangle-tablet.svg");
-      top: -56px;
+      left: 0;
+      top: -57px;
+    }
+    &::after {
+      content: none;
     }
   }
 
-  .main-intro__description--active::after {
-      content: none;
+  .main-intro__title {
+    font-size: 21px;
+  }
+
+  .main-intro__description {
+    padding-left: 170px;
+    padding-right: 170px;
   }
 }
 
@@ -67,9 +85,14 @@
     background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
-  .main-intro__title {
+  .main-intro__text {
     &::before {
       content: url("../../img/bg-intro-triangle-desktop.svg");
     }
+  }
+
+  .main-intro__description {
+    padding-left: 380px;
+    padding-right: 380px;
   }
 }
