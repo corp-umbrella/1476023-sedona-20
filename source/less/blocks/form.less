@@ -1,38 +1,38 @@
-.filter-form {
+.form {
   margin-bottom: 48px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.filter-form__item {
+.form__item {
   margin: 0;
   padding: 0;
   padding-top: 20px;
   border: none;
 }
 
-.filter-form__legend {
+.form__legend {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   padding-top: 20px;
 }
 
-.filter-form__row {
+.form__row {
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
-.filter-form__label {
-  align-self: center;
+.form__label {
   margin-right: 12px;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
 }
 
-.filter-form__input {
+.form__input {
   flex-grow: 1;
   padding-top: 18px;
   padding-bottom: 14px;
@@ -48,12 +48,12 @@
   }
 }
 
-.filter-form__footer {
+.form__footer {
   width: 100%;
   order: 6;
 }
 
-.filter-form__button {
+.form__button {
   width: 280px;
   text-transform: uppercase;
   border: none;
@@ -65,7 +65,7 @@
   outline: none;
 }
 
-.filter-form__rule {
+.form__rule {
   display: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -73,7 +73,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .filter-form {
+  .form {
     display: flex;
     flex-wrap: wrap;
     margin-left: 60px;
@@ -82,13 +82,13 @@
     padding-right: 0px;
   }
 
-  .filter-form__legend--active {
+  .form__legend--active {
     display: flex;
     align-items: center;
   }
 
-  .filter-form__legend--active::before,
-  .filter-form__legend--active::after {
+  .form__legend--active::before,
+  .form__legend--active::after {
     content: "";
     width: 123px;
     flex-grow: 1;
@@ -97,32 +97,32 @@
     background: @special-light-grey;
   }
 
-  .filter-form__legend--active::before {
+  .form__legend--active::before {
     margin-right: 25px;
   }
 
-  .filter-form__legend--active::after {
+  .form__legend--active::after {
     margin-left: 25px;
   }
 
-  .filter-form__footer {
+  .form__footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
   }
 
-  .filter-form__button {
+  .form__button {
     width: 50%;
   }
 
-  .filter-form__rule {
+  .form__rule {
     display: block;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .filter-form {
+  .form {
     margin-left: 120px;
     margin-right: 120px;
   }

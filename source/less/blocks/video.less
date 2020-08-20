@@ -28,10 +28,14 @@
   position: relative;
 }
 
+.video__picture {
+  display: block;
+}
+
 .video__controls {
   margin-left: auto;
   margin-right: auto;
-  margin-top: -53px;
+  margin-top: -45px;
   width: 280px;
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +80,8 @@
   position: absolute;
   background-color: @basic-white;
   left: 22px;
-  top: 21px;
+  top: 50%;
+  transform: translateY(-50%);
   opacity: 0.2;
   width: 235px;
   height: 3px;
@@ -86,7 +91,8 @@
   position: absolute;
   background-color: @basic-white;
   left: 56px;
-  top: 16px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 13px;
   height: 13px;
   border-radius: 50%;
@@ -98,6 +104,10 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+}
+
+.video__icon {
+  display: block;
 }
 
 @media (min-width: @tablet-width) {
@@ -112,55 +122,67 @@
   }
 
   .video__controls {
+    width: 100%;
     height: 93px;
-    width: 648px;
-    display: grid;
-    grid-template-columns: min-content max-content min-content min-content;
+    justify-content: space-between;
+    margin-top: -93px;
   }
 
   .video__item {
+    align-items: center;
     &--pannel {
-      order: 2;
-      width: 400px;
       background-color: fade(@basic-black, 60%);
+      order: 2;
+      width: 389px;
       height: auto;
     }
 
     &--repeat {
-      order: 1;
       background-color: fade(@basic-black, 60%);
+      order: 1;
       flex-grow: 0;
+      padding-top: 35px;
+      padding-bottom: 0px;
+      padding-right: 35px;
+      padding-left: 42px;
     }
 
     &--comments {
-      order: 3;
       background-color: fade(@basic-black, 60%);
-      padding-top: 23px;
-      padding-bottom: 23px;
+      order: 3;
+      padding-top: 36px;
+      padding-bottom: 0px;
+      padding-right: 0px;
+      padding-left: 42px;
     }
 
     &--expand {
-      order: 4;
       background-color: fade(@basic-black, 60%);
-      padding-top: 23px;
-      padding-bottom: 23px;
-      padding-right: 8px;
+      order: 4;
+      padding-top: 36px;
+      padding-bottom: 0px;
+      padding-right: 41px;
+      padding-left: 31px;
     }
   }
 
   .video__timeline {
-    width: 389px;
-    left: 22px;
-    top: 21px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .video__toggle {
     left: 56px;
-    top: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .video__button {
     background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -168,5 +190,15 @@
   .video {
     margin-right: 200px;
     margin-left: 200px;
+  }
+
+  .video__item {
+    &--pannel {
+      width: 540px;
+    }
+
+    &--expand {
+      padding-right: 42px;
+    }
   }
 }
