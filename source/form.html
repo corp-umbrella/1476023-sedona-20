@@ -18,7 +18,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active">
+            <a class="main-nav__link" href="index.html">
               Главная
             </a>
           </li>
@@ -28,7 +28,7 @@
             </a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">
+            <a class="main-nav__link main-nav__link--active" href="#">
               Форма отзыва
             </a>
           </li>
@@ -41,7 +41,7 @@
       </div>
     </nav>
     <a class="main-nav__logo">
-      <img src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
+      <img class="main-nav__image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
     </a>
   </header>
   <main class="page__main">
@@ -54,143 +54,181 @@
           <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
         </div>
       </section>
-      <h3 class="main-intro__title">
-        Оставьте свой отзыв
-      </h3>
-      <p class="main-intro__description">
-        Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
-      </p>
+      <div class="main-intro__text">
+        <h3 class="main-intro__title">
+          Оставьте свой отзыв
+        </h3>
+        <p class="main-intro__description">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        </p>
+      </div>
     </section>
     <section class="page__form main-form">
-      <form class="filter-form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="filter-form__item form-name">
-          <legend class="filter-form__legend">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="form__item form-name">
+          <h4 class="form__legend form-name__legend">
             Представьтесь:
-          </legend>
-          <div class="filter-form__row form-name__item">
-            <label class="filter-form__label" for="appointment-name">
+          </h4>
+          <div class="form__row form-name__item">
+            <label class="form__label" for="appointment-name">
               Имя*:
             </label>
-            <input class="filter-form__input form-name__input" id="appointment-name" type="text" name="name" required
+            <input class="form__input form-name__input" id="appointment-name" type="text" name="name" required
               placeholder="Петр">
           </div>
-          <div class="filter-form__row form-name__item">
-            <label class="filter-form__label" for="appointment-surname">
+          <div class="form__row form-name__item">
+            <label class="form__label" for="appointment-surname">
               Фамилия*:
             </label>
-            <input class="filter-form__input form-name__input" id="appointment-surname" type="text" name="surname"
-              required placeholder="Иванов">
+            <input class="form__input form-name__input" id="appointment-surname" type="text" name="surname" required
+              placeholder="Иванов">
           </div>
-          <div class="filter-form__row form-name__item">
-            <label class="filter-form__label" for="appointment-patronymic">
+          <div class="form__row form-name__item">
+            <label class="form__label" for="appointment-patronymic">
               Отчество:
             </label>
-            <input class="filter-form__input form-name__input" id="appointment-patronymic" type="text" name="patronymic"
+            <input class="form__input form-name__input" id="appointment-patronymic" type="text" name="patronymic"
               placeholder="Александрович">
           </div>
-        </fieldset>
-        <fieldset class="filter-form__item form-contacts">
-          <legend class="filter-form__legend filter-form__legend--active">
+        </div>
+        <div class="form__item form-contacts">
+          <h4 class="form__legend form__legend--active">
             Контактная информация:
-          </legend>
-          <div class="filter-form__row form-contacts__item">
-            <label class="filter-form__label form-contacts__label" for="appointment-tel">
-              Контактный телефон*:
+          </h4>
+          <div class="form__row form-contacts__item">
+            <label class="form__label form-contacts__label" for="appointment-tel">
+              <span class="form-contacts__tel">
+                Контактный
+              </span> телефон*:
             </label>
-            <input class="filter-form__input form-contacts__input" id="appointment-tel" type="text" name="phone"
-              required placeholder="Введите телефон">
+            <div class="form-contacts__phone">
+              <input class="form__input form-contacts__input form-contacts__input--phone" id="appointment-tel" type="text" name="phone" required
+                placeholder="Введите телефон">
+            </div>
           </div>
-          <div class="filter-form__row form-contacts__item">
-            <label class="filter-form__label form-contacts__label" for="appointment-email">
+          <div class="form__row form-contacts__item">
+            <label class="form__label form-contacts__label" for="appointment-email">
               Электронная почта*:
             </label>
-            <input class="filter-form__input form-contacts__input" id="appointment-email" type="text" name="email"
-              required placeholder="Введите e-mail">
+            <div class="form-contacts__email">
+              <input class="form__input form-contacts__input form-contacts__input--email" id="appointment-email"
+                type="text" name="email" required placeholder="Введите e-mail">
+            </div>
           </div>
-        </fieldset>
-        <fieldset class="filter-form__item form-impression">
-          <legend class="filter-form__legend">
+        </div>
+        <div class="form__item form-impression">
+          <h4 class="form__legend form-impression__legend">
             Ваше общее впечатление:
-          </legend>
+          </h4>
           <ul class="form-impression__list">
-            <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+            <li class="form__row form-impression__item">
+              <input class="form__input visually-hidden form-impression__radio" type="radio" name="impression"
                 value="positive" id="filter-positive" checked>
-              <label class="filter-form__label form-impression__label" for="filter-positive">
+              <label class="form__label form-impression__label" for="filter-positive">
                 Скорее положительное
               </label>
             </li>
-            <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+            <li class="form__row form-impression__item">
+              <input class="form__input visually-hidden form-impression__radio" type="radio" name="impression"
                 value="negative" id="filter-negative">
-              <label class="filter-form__label form-impression__label" for="filter-negative">
+              <label class="form__label form-impression__label" for="filter-negative">
                 Скорее отрицательное
               </label>
             </li>
-            <li class="filter-form__row form-impression__item">
-              <input class="filter-form__input visually-hidden form-impression__input" type="radio" name="impression"
+            <li class="form__row form-impression__item">
+              <input class="form__input visually-hidden form-impression__radio" type="radio" name="impression"
                 value="unknown" id="filter-unknown">
-              <label class="filter-form__label form-impression__label" for="filter-unknown">
+              <label class="form__label form-impression__label" for="filter-unknown">
                 Затрудняюсь ответить
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter-form__item form-attractions">
-          <legend class="filter-form__legend filter-form__legend--active">
+        </div>
+        <div class="form__item form-attractions">
+          <h4 class="form__legend form__legend--active">
             Посещенные достопримечательности:
-          </legend>
+          </h4>
           <ul class="form-attractions__list">
-            <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
-                name="devils-bridge" id="filter-devils-bridge" checked>
-              <label class="filter-form__label form-attractions__label" for="filter-devils-bridge">
+            <li class="form__row form-attractions__item">
+              <input class="form__input visually-hidden form-attractions__checkbox" type="checkbox" name="devils-bridge"
+                id="filter-devils-bridge" checked>
+              <label class="form__label form-attractions__label" for="filter-devils-bridge">
                 Мост Дьявола
               </label>
             </li>
-            <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
-                name="bell-mountain" id="filter-bell-mountain" checked>
-              <label class="filter-form__label form-attractions__label" for="filter-bell-mountain">
+            <li class="form__row form-attractions__item">
+              <input class="form__input visually-hidden form-attractions__checkbox" type="checkbox" name="bell-mountain"
+                id="filter-bell-mountain" checked>
+              <label class="form__label form-attractions__label" for="filter-bell-mountain">
                 Гора-Колокол
               </label>
             </li>
-            <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox"
-                name="slide-park" id="filter-slide-park" checked>
-              <label class="filter-form__label form-attractions__label" for="filter-slide-park">
+            <li class="form__row form-attractions__item">
+              <input class="form__input visually-hidden form-attractions__checkbox" type="checkbox" name="slide-park"
+                id="filter-slide-park" checked>
+              <label class="form__label form-attractions__label" for="filter-slide-park">
                 Слайд-парк
               </label>
             </li>
-            <li class="filter-form__row form-attractions__item">
-              <input class="filter-form__input visually-hidden form-attractions__input" type="checkbox" name="red-rocks"
+            <li class="form__row form-attractions__item">
+              <input class="form__input visually-hidden form-attractions__checkbox" type="checkbox" name="red-rocks"
                 id="filter-red-rocks">
-              <label class="filter-form__label form-attractions__label" for="filter-red-rocks">
+              <label class="form__label form-attractions__label" for="filter-red-rocks">
                 Красные скалы
               </label>
             </li>
           </ul>
-        </fieldset>
-        <fieldset class="filter-form__item form-emotions">
-          <legend class="filter-form__legend filter-form__legend--active">
+        </div>
+        <div class="form__item form-emotions">
+          <h4 class="form__legend form__legend--active">
             Опишите свои эмоции:
-          </legend>
-          <div class="filter-form__row form-emotions__item">
-            <input class="filter-form__input form-emotions__input" type="text" name="emotions"
-              placeholder="Опишите подробно все свои восторги">
+          </h4>
+          <div class="form__row form-emotions__item">
+            <textarea class="form__input form-emotions__input" type="text" name="emotions"
+              placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
-        </fieldset>
-        <div class="filter-form__footer">
-          <button class="filter-form__button button" type="submit">
-            <span>
+        </div>
+        <div class="form__footer">
+          <button class="form__button button" type="submit">
+            <span class="button__text">
               Отправить отзыв
             </span>
           </button>
-          <span class="filter-form__rule">
+          <span class="form__rule">
             * - Обязательные поля
           </span>
         </div>
       </form>
+    </section>
+    <!-- Чтобы увидеть мопапы, надо вместо hidden вставить show -->
+    <section class="modal__success modal__hidden">
+      <h3 class="modal__title">
+        Ваш отзыв отправлен!
+      </h3>
+      <p class="modal__description">
+        Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.
+      </p>
+      <div class="modal__close">
+        <button class="button modal__button">
+          <span class="button__text">
+            Закрыть окно
+          </span>
+        </button>
+      </div>
+    </section>
+    <!-- Чтобы увидеть мопапы, надо вместо hidden вставить show -->
+    <section class="modal__failure modal__hidden">
+      <h3 class="modal__title">
+        Что-то пошло не так!
+      </h3>
+      <p class="modal__description">
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+      </p>
+      <button class="button modal__button">
+        <span class="button__text">
+          Ок
+        </span>
+      </button>
     </section>
   </main>
   <footer class="page__footer main-footer">
@@ -202,17 +240,17 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#" aria-label="Седона в Твиттере">
-              <img src="img/icon-twitter.svg">
+              <img class="social__icon" src="img/icon-twitter.svg">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="Седона в Фейсбуке">
-              <img src="img/icon-facebook.svg">
+              <img class="social__icon" src="img/icon-facebook.svg">
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#" aria-label="Седона в Ютубе">
-              <img src="img/icon-youtube.svg">
+              <img class="social__icon" src="img/icon-youtube.svg">
             </a>
           </li>
         </ul>
@@ -220,7 +258,7 @@
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <img src="img/logo-htmlacademy.svg">
+          <img class="copyright__icon" src="img/logo-htmlacademy.svg">
         </a>
       </div>
     </div>

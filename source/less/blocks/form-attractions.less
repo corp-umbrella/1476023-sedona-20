@@ -3,17 +3,48 @@
   width: 100%;
 }
 
-.form-attractions__list {}
+.form-attractions__list {
+  .list-reset()
+}
 
-.form-attractions__item {}
+.form-attractions__item {
+  margin-bottom: 54px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .form-attractions__input {}
 
+.form-attractions__checkbox+label::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  width: 46px;
+  height: 46px;
+  background-color: @special-extra-grey;
+}
+
+.form-attractions__checkbox:checked+label::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -10px;
+  width: 46px;
+  height: 46px;
+  background-image: url(../../img/icon-tick.svg);
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
 .form-attractions__label {
+  position: relative;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
+  padding-left: 75px;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,6 +52,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  }
+
+  .form-attractions__item {
+    margin-bottom: 54px;
+    &:last-child {
+      margin-bottom: 54px;
+    }
   }
 }
 
