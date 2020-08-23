@@ -2,15 +2,9 @@
   text-align: left;
 }
 
-.gallery__wrapper {}
-
 .gallery__list {
   .list-reset();
 }
-
-.gallery__first-photo {}
-
-.gallery__other-photos {}
 
 .gallery__item {
   padding-right: 20px;
@@ -23,10 +17,6 @@
 .gallery__picture {
   display: block;
 }
-
-.gallery__text {}
-
-.gallery__info {}
 
 .gallery__title {
   margin: 0;
@@ -58,10 +48,11 @@
   background-color: inherit;
   cursor: pointer;
   position: relative;
+
   &::before {
     position: absolute;
     content: url("../../img/icon-like.svg");
-    left: 0px;
+    left: 0;
     top: -10px;
   }
 }
@@ -86,14 +77,15 @@
 
   .gallery__item {
     border: none;
-    padding: 0px;
+    padding: 0;
     width: 50%;
+
     &--active {
       width: 100%;
     }
   }
 
-  .gallery__item--active img{
+  .gallery__item--active img {
     width: 100%;
   }
 
@@ -104,6 +96,7 @@
     justify-content: space-between;
     padding-top: 20px;
     padding-bottom: 20px;
+
     &--grey {
       background-color: @special-dark-grey;
     }
@@ -122,13 +115,14 @@
 
 @media (min-width: @desktop-width) {
   .gallery {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .gallery__item {
     position: relative;
     width: 33.33%;
+
     &--active {
       width: 100%;
     }
@@ -139,7 +133,8 @@
     background-color: fade(@basic-black, 60%);
     position: absolute;
     width: 100%;
-    bottom: 0px;
+    bottom: 0;
+
     &--grey {
       background-color: fade(@basic-black, 60%);
     }

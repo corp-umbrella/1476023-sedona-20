@@ -26,33 +26,31 @@
   background-color: @basic-extra-grey;
   background-image: url("../../img/icon-phone.svg");
   background-size: 18px 18px;
-  background-position-x: 0px;
-  background-position-y: 0px;
+  background-position-x: 0;
+  background-position-y: 0;
 }
 
 .form-contacts__email::after {
   content: "";
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 0;
+  top: 0;
   background-color: @basic-extra-grey;
   background-image: url("../../img/icon-mail.svg");
   background-size: 16px 12px;
-  background-position-x: 0px;
-  background-position-y: 0px;
+  background-position-x: 0;
+  background-position-y: 0;
 }
 
 @media (min-width: @tablet-width) {
-  .form-contacts__item {}
-
   .form-contacts__label {
     text-align: left;
   }
 
   .form-contacts__phone,
   .form-contacts__email {
-  width: 100%;
-}
+    width: 100%;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -70,7 +68,7 @@
   }
 
   .form-contacts__label {
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .form-contacts__phone,
