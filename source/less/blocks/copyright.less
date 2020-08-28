@@ -8,6 +8,20 @@
   margin-right: 12px;
 }
 
+.copyright__link {
+  color: @basic-black;
+  transition: all 0.3s;
+
+  &:hover {
+    color: @basic-blue;
+  }
+
+  &:active {
+    color: @basic-black;
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .copyright {
     margin-top: 0;

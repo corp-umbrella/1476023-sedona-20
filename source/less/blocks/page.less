@@ -22,6 +22,22 @@
   margin-top: 56px;
 }
 
+.page__map {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background-color: @basic-extra-grey;
+    background-image: url("../../img/icon-map-marker.svg");
+    background-size: 27px 27px;
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .page__body {
     width: 768px;
