@@ -12,6 +12,7 @@
 }
 
 .form__legend {
+  width: 100%;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -33,17 +34,18 @@
 }
 
 .form__input {
+  font-family: "PT Sans", "Arial", sans-serif;
   flex-grow: 1;
   padding-top: 18px;
   padding-bottom: 14px;
+  padding-left: 22px;
   background-color: @special-extra-grey;
   border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+
   &::placeholder {
-    padding-left: 22px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    text-transform: none;
     color: @basic-black;
   }
 }
@@ -78,8 +80,8 @@
     flex-wrap: wrap;
     margin-left: 60px;
     margin-right: 60px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .form__legend--active {

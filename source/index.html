@@ -41,7 +41,13 @@
       </div>
     </nav>
     <a class="main-nav__logo">
-      <img class="main-nav__image" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="Логотип города Седона">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)"
+          srcset="img/logo-sedona-tablet.svg">
+          <img class="main-nav__image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
+      </picture>
     </a>
   </header>
   <main class="page__main">
@@ -49,10 +55,8 @@
       <h1 class="visually-hidden">
         Седона
       </h1>
-      <section class="main-intro__image intro-image">
-        <div class="intro-image__title">
-          <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
-        </div>
+      <section class="main-intro__image">
+          <img class="main-intro__picture" src="img/text-sedona-index.svg" alt="Welcome to the gorgeous Sedona">
       </section>
       <div class="main-intro__text main-intro__text--index">
         <h3 class="main-intro__title">
@@ -79,7 +83,16 @@
                   Седона не аттракцион для туристов, там течёт своя жизнь
                 </p>
               </div>
-              <img class="real-town__picture" src="img/main-city-mobile@1x.jpg" alt="Фото жилья">
+              <div class="advantages__wide-photo">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/main-city-desktop@1x.jpg 1x, img/main-city-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/main-city-tablet@1x.jpg 1x, img/main-city-tablet@2x.jpg 2x">
+                  <img class="real-town__picture" src="img/main-city-mobile@1x.jpg"
+                    srcset="img/main-city-mobile@2x.jpg 2x" alt="Фото жилья">
+                </picture>
+              </div>
             </article>
             <ul class="advantages__sublist real-town__list">
               <li class="real-town__item real-town__item--house">
@@ -121,7 +134,16 @@
                   Да, по нему можно пройти! Если вы осмелитесь, конечно
                 </p>
               </div>
-              <img class="devil-bridge__picture" src="img/main-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+              <div class="advantages__wide-photo">
+                <picture>
+                  <source media="(min-width: 1200px)"
+                    srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)"
+                    srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
+                  <img class="devil-bridge__picture" src="img/main-bridge-mobile@1x.jpg"
+                    srcset="img/main-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+                </picture>
+              </div>
             </div>
           </li>
           <li class="advantages__item advantages__item--grey">
@@ -178,7 +200,11 @@
           </span>
         </a>
       </section>
-      <img class="page__map" src="img/bg-map-mobile@1x.jpg" alt="Карта">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+        <img class="page__map" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" alt="Карта">
+      </picture>
     </section>
   </main>
   <footer class="page__footer main-footer">
@@ -208,11 +234,18 @@
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <img  class="copyright__icon"src="img/logo-htmlacademy.svg">
+          <svg class="copyright__icon" width="27" height="35">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
+  <svg width="0" height="0" class="visually-hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.943 34.09" id="logo-htmlacademy">
+      <path fill="currentColor" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
+    </symbol>
+  </svg>
 </body>
 
 </html>

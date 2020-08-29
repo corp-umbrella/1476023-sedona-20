@@ -49,10 +49,8 @@
       <h1 class="visually-hidden">
         Седона
       </h1>
-      <section class="main-intro__image intro-image">
-        <div class="intro-image__title">
-          <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
-        </div>
+      <section class="main-intro__image main-intro__image--other">
+        <img class="main-intro__picture main-intro__picture--other" src="img/text-sedona.svg" alt="Welcome to the gorgeous Sedona">
       </section>
       <div class="main-intro__text">
         <h3 class="main-intro__title">
@@ -67,7 +65,14 @@
       <div class="gallery__wrapper">
         <ul class="gallery__list">
           <li class="gallery__item gallery__item--active">
-            <img class="gallery__picture" src="img/photo-sunset-mobile@1x.jpg" alt="Неродные просторы">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="gallery__picture" src="img/photo-sunset-mobile@1x.jpg"
+                srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Неродные просторы">
+            </picture>
             <div class="gallery__text">
               <div class="gallery__info">
                 <h4 class="gallery__title">
@@ -90,7 +95,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture" src="img/photo-cactus-mobile@1x.jpg" alt="Местная растительность">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+              <img class="gallery__picture" src="img/photo-cactus-mobile@1x.jpg"
+                srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Местная растительность">
+            </picture>
             <div class="gallery__text">
               <div class="gallery__info">
                 <h4 class="gallery__title">
@@ -113,7 +125,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture" src="img/photo-roads-mobile@1x.jpg" alt="Дорога на север">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+              <img class="gallery__picture" src="img/photo-roads-mobile@1x.jpg"
+                srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Дорога на север">
+            </picture>
             <div class="gallery__text gallery__text--grey">
               <div class="gallery__info">
                 <h4 class="gallery__title">
@@ -136,7 +155,14 @@
             </div>
           </li>
           <li class="gallery__item">
-            <img class="gallery__picture" src="img/photo-bridge-mobile@1x.jpg" alt="Мост Дьявола">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="gallery__picture" src="img/photo-bridge-mobile@1x.jpg"
+                srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Мост Дьявола">
+            </picture>
             <div class="gallery__text">
               <div class="gallery__info">
                 <h4 class="gallery__title">
@@ -169,7 +195,13 @@
         Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
       </p>
       <div class="video__player">
-        <img class="video__picture" src="img/video-mobile@1x.jpg" alt="Видео">
+        <picture>
+          <source media="(min-width: 1200px)"
+            srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img class="video__picture" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео">
+        </picture>
         <div class="video__controls">
           <div class="video__item video__item--pannel">
             <div class="video__timeline"></div>
@@ -221,11 +253,18 @@
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <img class="copyright__icon" src="img/logo-htmlacademy.svg">
+          <svg class="copyright__icon" width="27" height="35">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
   </footer>
+  <svg width="0" height="0" class="visually-hidden">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.943 34.09" id="logo-htmlacademy">
+      <path fill="currentColor" d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"></path>
+    </symbol>
+  </svg>
 </body>
 
 </html>

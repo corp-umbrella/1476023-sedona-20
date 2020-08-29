@@ -18,27 +18,25 @@
   text-align: center;
 }
 
-.page__header {}
-
 .page__main {
   margin-top: 56px;
 }
 
-.page__intro {}
+.page__map {
+  position: relative;
 
-.page__advantages {}
-
-.page__interesed {}
-
-.page__map {}
-
-.page__gallery {}
-
-.page__video {}
-
-.page__form {}
-
-.page__footer {}
+  &::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    background-color: @basic-extra-grey;
+    background-image: url("../../img/icon-map-marker.svg");
+    background-size: 27px 27px;
+    background-position-x: 0;
+    background-position-y: 0;
+  }
+}
 
 @media (min-width: @tablet-width) {
   .page__body {
@@ -50,7 +48,7 @@
   }
 
   .page__main {
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -61,6 +59,6 @@
 
   .page__body {
     width: 1200px;
-    box-shadow: 0px 5px 15px rgba(0, 1, 1, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }

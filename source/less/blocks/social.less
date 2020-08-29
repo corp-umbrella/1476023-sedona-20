@@ -18,12 +18,15 @@
   background-color: @basic-blue;
   transition: all 0.3s;
   margin-right: 6px;
+
   &:last-child {
     margin-right: 0;
   }
+
   &:hover {
     background-color: @basic-dark-blue;
   }
+
   &:active {
     background-color: @special-dark-blue;
   }
@@ -31,22 +34,14 @@
 
 .social__link {
   transition: all 0.3s;
+
   &:active {
     opacity: 0.3;
   }
-  /*
-  &--twitter {}
-  &--facebook {}
-  &--youtube {}
-  */
 }
-
-.social__icon {}
 
 @media (min-width: @tablet-width) {
   .social {
     margin-top: 0;
   }
 }
-
-@media (min-width: @desktop-width) {}
