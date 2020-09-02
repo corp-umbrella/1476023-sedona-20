@@ -13,28 +13,44 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:hover label::before {
+    background-color: @basic-grey;
+    transition: all 0.3s;
+  }
+
+  &:active label::before {
+    background-color: @basic-dark-grey;
+  }
+
+  &:active label::after {
+    opacity: 0.3;
+    transition: all 0.3s;
+  }
 }
 
 .form-attractions__checkbox + label::before {
   content: "";
   position: absolute;
   left: 0;
-  top: -10px;
-  width: 46px;
-  height: 46px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
   background-color: @special-extra-grey;
 }
 
 .form-attractions__checkbox:checked + label::after {
   content: "";
   position: absolute;
-  left: 0;
-  top: -10px;
-  width: 46px;
-  height: 46px;
-  background-image: url("../../img/icon-tick.svg");
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 17px;
+  background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
-  background-position: 12px 12px;
+  background-position: center;
 }
 
 .form-attractions__label {
@@ -54,7 +70,7 @@
   }
 
   .form-attractions__item {
-    margin-bottom: 54px;
+    margin-right: 115px;
 
     &:last-child {
       margin-bottom: 54px;
@@ -66,5 +82,9 @@
   .form-attractions__list {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: none;
+  }
+
+  .form-attractions__item {
+    margin-right: 30px;
   }
 }

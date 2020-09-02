@@ -43,25 +43,22 @@
   width: 85px;
 }
 
-.gallery__likes {
+.gallery__like {
   border: none;
   background-color: inherit;
   cursor: pointer;
-  position: relative;
+}
 
-  &::before {
-    position: absolute;
-    content: url("../../img/icon-like.svg");
-    left: 0;
-    top: -10px;
-  }
+.gallery__like-icon {
+  color: @basic-black;
+  opacity: 0.3;
 }
 
 .gallery__rating-text {
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
-  margin-left: 20px;
+  margin-left: 14px;
 }
 
 @media (min-width: @tablet-width) {
@@ -111,6 +108,10 @@
   .gallery__rating {
     margin-top: 0;
   }
+
+  .gallery__rating-text {
+    margin-left: 9px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -138,6 +139,11 @@
     &--grey {
       background-color: fade(@basic-black, 60%);
     }
+  }
+
+  .gallery__like-icon {
+    color: @basic-white;
+    opacity: 1;
   }
 
   .gallery-video {

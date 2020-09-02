@@ -2,10 +2,42 @@
   position: relative;
 }
 
-.main-nav__toggle {
+.main-nav__button {
   position: absolute;
   right: 15px;
   top: 18px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-nav__icon-menu {
+  color: @basic-blue;
+}
+
+.main-nav__icon-cross {
+  color: @basic-white;
+}
+
+.main-nav__icon-menu,
+.main-nav__button--open .main-nav__icon--cross {
+  display: block;
+}
+
+.main-nav__icon-cross,
+.main-nav__button--open .main-nav__icon--menu {
+  display: block;
 }
 
 .main-nav__list {
@@ -48,7 +80,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav__toggle {
+  .main-nav__button {
     display: none;
   }
 

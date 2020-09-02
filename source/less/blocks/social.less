@@ -33,11 +33,20 @@
 }
 
 .social__link {
+  width: 100%;
+  height: 100%;
   transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.social__item:active .social__link {
+  opacity: 0.3;
+}
+
+.social__icon {
+  color: @basic-white;
 }
 
 @media (min-width: @tablet-width) {

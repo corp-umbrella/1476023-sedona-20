@@ -9,11 +9,12 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 901px auto;
+    background-size: 902px auto;
   }
 
   &--other {
     min-height: 158px;
+    background-position-y: 80%;
   }
 }
 
@@ -31,18 +32,20 @@
   position: relative;
   padding-top: 32px;
   padding-bottom: 30px;
+  border-top: 1px solid @basic-white;
 
   &::before {
     position: absolute;
-    content: url("../../img/bg-intro-triangle-mobile.svg");
+    content: url("../img/bg-intro-triangle-mobile.svg");
     left: 0;
     top: -26px;
+    width: 100%;
   }
 }
 
 .main-intro__text--index::after {
   position: absolute;
-  content: url("../../img/bg-triangle.svg");
+  content: url("../img/bg-triangle.svg");
   left: 0;
   bottom: -25px;
 }
@@ -51,13 +54,8 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  padding-right: 14px;
-  padding-left: 14px;
   margin: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding: 0 30px;
 }
 
 .main-intro__description {
@@ -99,7 +97,7 @@
   .main-intro__text {
     &::before {
       position: absolute;
-      content: url("../../img/bg-intro-triangle-tablet.svg");
+      content: url("../img/bg-intro-triangle-tablet.svg");
       left: 0;
       top: -57px;
     }
@@ -144,7 +142,7 @@
   }
 
   .main-intro__text::before {
-    content: url("../../img/bg-intro-triangle-desktop.svg");
+    content: url("../img/bg-intro-triangle-desktop.svg");
   }
 
   .main-intro__description {

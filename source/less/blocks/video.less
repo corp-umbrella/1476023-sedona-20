@@ -104,10 +104,21 @@
   border: none;
   background-color: inherit;
   cursor: pointer;
+  outline: none;
 }
 
 .video__icon {
   display: block;
+  color: @special-grey;
+  transition: all 0.3s;
+
+  &:hover {
+    color: @special-black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -184,6 +195,19 @@
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .video__icon {
+    color: @basic-white;
+
+    &:hover {
+      color: @basic-white;
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
