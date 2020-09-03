@@ -13,15 +13,30 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &:hover label::before {
+    background-color: @basic-grey;
+    transition: all 0.3s;
+  }
+
+  &:active label::before {
+    background-color: @basic-dark-grey;
+  }
+
+  &:active label::after {
+    transition: all 0.3s;
+    opacity: 0.3;
+  }
 }
 
 .form-impression__radio + label::before {
   content: "";
   position: absolute;
   left: 0;
-  top: -10px;
-  width: 48px;
-  height: 48px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
   background-color: @special-extra-grey;
   border-radius: 50%;
 }
@@ -29,11 +44,12 @@
 .form-impression__radio:checked + label::after {
   content: "";
   position: absolute;
-  left: 15px;
-  top: 5px;
-  width: 18px;
-  height: 18px;
-  background-color: @basic-black;
+  left: 17px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  background-color: @special-black;
   border-radius: 50%;
 }
 
@@ -54,5 +70,15 @@
 
   .form-impression__legend {
     text-align: left;
+  }
+
+  .form-impression__item {
+    margin-right: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-impression__item {
+    margin-right: 200px;
   }
 }

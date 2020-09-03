@@ -11,6 +11,10 @@
   margin-left: 22px;
 }
 
+.form-contacts__input {
+  padding-right: 58px;
+}
+
 .form-contacts__phone,
 .form-contacts__email {
   position: relative;
@@ -21,13 +25,16 @@
 .form-contacts__phone::after {
   content: "";
   position: absolute;
-  right: 18px;
-  top: 18px;
+  right: 0;
+  top: 0;
   background-color: @basic-extra-grey;
-  background-image: url("../../img/icon-phone.svg");
+  background-image: url("../img/icon-phone.svg");
   background-size: 18px 18px;
-  background-position-x: 0;
-  background-position-y: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 58px;
+  height: 100%;
 }
 
 .form-contacts__email::after {
@@ -36,10 +43,13 @@
   right: 0;
   top: 0;
   background-color: @basic-extra-grey;
-  background-image: url("../../img/icon-mail.svg");
+  background-image: url("../img/icon-mail.svg");
   background-size: 16px 12px;
-  background-position-x: 0;
-  background-position-y: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: block;
+  width: 58px;
+  height: 100%;
 }
 
 @media (min-width: @tablet-width) {
@@ -74,6 +84,10 @@
   .form-contacts__phone,
   .form-contacts__email {
     width: 316px;
+  }
+
+  .form-contacts__phone {
+    margin-right: 58px;
   }
 
   .form-contacts__tel {

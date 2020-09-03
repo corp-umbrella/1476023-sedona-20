@@ -44,6 +44,17 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  outline: none;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: @basic-grey;
+  }
+
+  &:focus {
+    background-color: @basic-white;
+    outline: 4px solid @basic-grey;
+  }
 
   &::placeholder {
     color: @basic-black;
