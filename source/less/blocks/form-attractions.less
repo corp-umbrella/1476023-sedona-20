@@ -40,6 +40,17 @@
   background-color: @special-extra-grey;
 }
 
+.form-attractions__checkbox:focus + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background-color: @basic-grey;
+}
+
 .form-attractions__checkbox:checked + label::after {
   content: "";
   position: absolute;
