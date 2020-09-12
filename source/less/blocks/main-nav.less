@@ -40,8 +40,16 @@
   }
 }
 
-.main-nav__wrapper--closed {
+.main-nav__wrapper {
   display: none;
+
+  &--active {
+    display: block;
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__list {

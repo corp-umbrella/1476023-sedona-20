@@ -8,6 +8,7 @@ var modalFailureButton = document.querySelector('.modal__button--failure')
 var modalSuccessButton = document.querySelector('.modal__button--success')
 
 navToggle.classList.remove('main-nav__button--nojs');
+navMainList.classList.remove('.main-nav__wrapper--closed');
 
 navToggle.addEventListener('click', function() {
   if (navToggle) {
