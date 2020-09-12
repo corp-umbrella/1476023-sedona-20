@@ -1,6 +1,5 @@
 .form-name {
   order: 1;
-  width: 100%;
 }
 
 .form-name__item {
@@ -24,9 +23,9 @@
       display: block;
       width: 1px;
       height: 292px;
-      color: @special-light-grey;
-      top: 60px;
-      left: 0;
+      background-color: @special-light-grey;
+      top: 34px;
+      left: -1px;
     }
   }
 
@@ -37,5 +36,15 @@
 
   .form-name__item {
     padding-left: 58px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-name__legend {
+    padding-left: 80px;
+  }
+
+  .form-name__item {
+    padding-left: 80px;
   }
 }
