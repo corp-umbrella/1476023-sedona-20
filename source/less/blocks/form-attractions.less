@@ -1,6 +1,11 @@
 .form-attractions {
   order: 4;
-  width: 100%;
+  padding-bottom: 39px;
+}
+
+.form-attractions__legend {
+  padding-top: 15px;
+  padding-bottom: 36px;
 }
 
 .form-attractions__list {
@@ -38,6 +43,7 @@
   width: 56px;
   height: 56px;
   background-color: @special-extra-grey;
+  border-radius: 10%;
 }
 
 .form-attractions__checkbox:focus + label::before {
@@ -49,6 +55,7 @@
   width: 56px;
   height: 56px;
   background-color: @basic-grey;
+  border-radius: 10%;
 }
 
 .form-attractions__checkbox:checked + label::after {
@@ -70,32 +77,65 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
-  padding-left: 75px;
+  padding-left: 79px;
 }
 
 @media (min-width: @tablet-width) {
+
+  .form-attractions {
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-attractions__legend {
+    padding-top: 29px;
+  }
+
   .form-attractions__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    width: 520px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 62px;
+    padding-top: 23px;
   }
 
   .form-attractions__item {
-    margin-right: 115px;
+    width: 50%;
+    margin-bottom: 61px;
 
     &:last-child {
-      margin-bottom: 54px;
+      margin-bottom: 61px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
+  .form-attractions__legend {
+    padding-top: 32px;
+    padding-bottom: 34px;
+  }
+
   .form-attractions__list {
+    width: 100%;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: none;
+    padding-left: 0px;
   }
 
   .form-attractions__item {
-    margin-right: 30px;
+    margin-right: 96px;
+    width: 100%;
+  }
+
+  .form-attractions__label {
+    padding-left: 81px;
+  }
+
+  .form-attractions__checkbox + label::before,
+  .form-attractions__checkbox:focus + label::before {
+    border-radius: 0%;
   }
 }

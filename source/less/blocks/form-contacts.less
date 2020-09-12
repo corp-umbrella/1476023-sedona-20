@@ -1,14 +1,21 @@
 .form-contacts {
   order: 2;
-  width: 100%;
+  padding-bottom: 16px;
+}
+
+.form-contacts__legend {
+  padding-top: 20px;
+  padding-bottom: 16px;
 }
 
 .form-contacts__item {
   display: flex;
+  margin-bottom: 11px;
 }
 
 .form-contacts__label {
-  margin-left: 22px;
+  margin-left: 25px;
+  margin-bottom: 9px;
 }
 
 .form-contacts__input {
@@ -17,6 +24,7 @@
 
 .form-contacts__phone,
 .form-contacts__email {
+  margin-left: 1px;
   position: relative;
   display: flex;
   flex-grow: 1;
@@ -52,9 +60,28 @@
   height: 100%;
 }
 
+.form-contacts__tel--desktop {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  .form-contacts {
+    padding: 0;
+    width: 100%;
+  }
+
+  .form-contacts__legend {
+    padding-top: 46px;
+    padding-bottom: 19px;
+  }
+
   .form-contacts__label {
     text-align: left;
+    margin-left: 22px;
+  }
+
+  .form-contacts__item {
+    margin-bottom: 22px;
   }
 
   .form-contacts__phone,
@@ -71,14 +98,21 @@
     order: 3;
   }
 
+  .form-contacts__legend {
+    padding-top: 44px;
+    padding-bottom: 70px;
+  }
+
   .form-contacts__item {
     flex-direction: row;
     flex-wrap: wrap;
     width: 50%;
+    align-items: baseline;
   }
 
   .form-contacts__label {
     margin-left: 0;
+    margin-right: 16px;
   }
 
   .form-contacts__phone,
@@ -87,11 +121,17 @@
   }
 
   .form-contacts__phone {
-    margin-right: 58px;
+    margin-right: 80px;
   }
 
   .form-contacts__tel {
-    display: none;
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .form-contacts__input {

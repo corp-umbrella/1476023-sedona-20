@@ -5,14 +5,14 @@
 .real-town__list {
   .list-reset();
   text-align: left;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 17px;
+  padding-bottom: 27px;
 }
 
 .real-town__item {
   padding-left: 70px;
   padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 8px;
   background-repeat: no-repeat;
   background-position-x: 15px;
   background-position-y: 8px;
@@ -20,16 +20,22 @@
   &--house {
     background-image: url("../img/icon-house.svg");
     background-size: 39px 37px;
+    background-position-x: 21px;
+    background-position-y: 9px;
   }
 
   &--gift {
     background-image: url("../img/icon-gift.svg");
     background-size: 32px 38px;
+    background-position-x: 25px;
+    background-position-y: 7px;
   }
 
   &--burger {
     background-image: url("../img/icon-burger.svg");
     background-size: 40px 35px;
+    background-position-x: 18px;
+    background-position-y: 13px;
   }
 }
 
@@ -43,12 +49,16 @@
 
 .real-town__description {
   margin: 0;
-  margin-top: 28px;
+  margin-top: 16px;
   padding: 0;
   padding-right: 20px;
   font-weight: normal;
   font-size: 14px;
   line-height: 21px;
+}
+
+.real-town__text--desktop {
+  display: none;
 }
 
 .real-town__picture {
@@ -59,13 +69,15 @@
 
 @media (min-width: @tablet-width) {
   .real-town__list {
-    margin-top: 60px;
+    margin-top: 58px;
+    margin-bottom: 52px;
+    padding: 0;
   }
 
   .real-town__item {
     padding-left: 0;
     text-align: center;
-    padding-top: 90px;
+    padding-top: 100px;
     background-position-x: center;
     background-position-y: top;
 
@@ -82,7 +94,7 @@
       padding-left: 30px;
       padding-right: 30px;
       background-image: url("../img/icon-gift.svg");
-      background-size: 76px 68px;
+      background-size: 64px 74px;
     }
 
     &--burger {
@@ -90,7 +102,7 @@
       padding-left: 50px;
       padding-right: 50px;
       background-image: url("../img/icon-burger.svg");
-      background-size: 64px 75px;
+      background-size: 73px 76px;
     }
   }
 
@@ -100,10 +112,25 @@
 
   .real-town__description {
     padding-right: 0;
+    margin-top: 23px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .real-town__text {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
+  }
+
+  .real-town__list {
+    margin-bottom: 74px;
+  }
+
   .real-town__item {
     &--house {
       padding-left: 50px;
@@ -111,13 +138,13 @@
     }
 
     &--gift {
-      padding-left: 100px;
-      padding-right: 100px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &--burger {
-      padding-left: 100px;
-      padding-right: 100px;
+      padding-left: 50px;
+      padding-right: 50px;
     }
   }
 }

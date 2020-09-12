@@ -1,8 +1,8 @@
 .modal {
-  display: flex;
+  width: 320px;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 320px;
   position: fixed;
   animation: fadeIn 0.3s linear;
   left: 50%;
@@ -10,25 +10,23 @@
   transform: translateY(-50%) translateX(-50%);
   background-color: @basic-white;
   box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+}
 
-  &--hidden {
-    display: none;
-  }
+.modal--success {
+  padding-top: 38px;
 
-  &--success {
-    padding-top: 30px;
-  }
-
-  &--failure {
-    padding-top: 40px;
-    padding-bottom: 35px;
+  &--open {
+    display: flex;
   }
 }
 
-.modal--failure button {
-  width: 180px;
-  margin-right: auto;
-  margin-left: auto;
+.modal--failure {
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  &--open {
+    display: flex;
+  }
 }
 
 .modal__title {
@@ -41,26 +39,38 @@
 
 .modal__description {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 22px;
+  margin-top: 26px;
+  margin-bottom: 38px;
   padding: 0;
   font-size: 14px;
   line-height: 24px;
   padding-left: 50px;
   padding-right: 50px;
+
+  &--failure {
+    margin-bottom: 24px;
+  }
 }
 
 .modal__button {
   border: none;
-  width: 100%;
-  padding-top: 18px;
-  padding-bottom: 14px;
-  padding-left: auto;
-  padding-right: auto;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  padding-top: 18px;
+  padding-bottom: 14px;
+
+  &--success {
+    width: 100%;
+  }
+
+  &--failure {
+    width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .modal__close {
@@ -69,17 +79,16 @@
 }
 
 @media (min-width: @tablet-width) {
+
   .modal--success {
     width: 640px;
-    padding-top: 38px;
+    padding-top: 44px;
   }
 
   .modal--failure {
     width: 400px;
-    padding-top: 40px;
-    padding-bottom: 35px;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-top: 49px;
+    padding-bottom: 45px;
 
     & button {
       width: 272px;
@@ -96,6 +105,14 @@
     line-height: 40px;
   }
 
+  .modal__description {
+    margin-bottom: 42px;
+
+    &--failure {
+      margin-bottom: 40px;
+    }
+  }
+
   .modal__button {
     font-size: 21px;
   }
@@ -103,20 +120,20 @@
   .modal__close {
     padding-left: 91px;
     padding-right: 91px;
+    padding-top: 45px;
+    padding-bottom: 45px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .modal--success {
     width: 640px;
-    padding-top: 38px;
+    padding-top: 44px
   }
 
   .modal--failure {
     width: 400px;
-    padding-top: 40px;
-    padding-bottom: 35px;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 }

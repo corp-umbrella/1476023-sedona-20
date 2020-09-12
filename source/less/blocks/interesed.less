@@ -1,6 +1,6 @@
 .interesed {
   margin-top: 33px;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 }
 
 .interesed__title {
@@ -12,12 +12,17 @@
 }
 
 .interesed__description {
-  margin: 0;
-  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 27px;
+  margin-top: 21px;
+  margin-bottom: 28px;
+}
+
+.interesed__text--tablet {
+  display: none;
 }
 
 .interesed__button {
@@ -33,7 +38,41 @@
 }
 
 @media (min-width: @tablet-width) {
+  .interesed {
+    margin-top: 55px;
+    margin-bottom: 58px;
+  }
+
+  .interesed__title {
+    font-size: 30px;
+  }
+
+  .interesed__description {
+    margin-top: 33px;
+    margin-bottom: 39px;
+  }
+
+  .interesed__text {
+    &--mobile {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
+    }
+  }
+
   .interesed__button {
     width: 458px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .interesed {
+    margin-bottom: 66px;
+  }
+
+  .interesed__description {
+    margin-bottom: 44px;
   }
 }

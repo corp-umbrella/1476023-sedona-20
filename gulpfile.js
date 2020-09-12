@@ -12,6 +12,12 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 
+const html = () => {
+  return gulp.src('source/*.html')
+      .pipe(gulp.dest('dist'))
+      .pipe(sync.stream());
+};
+
 // Styles
 
 const styles = () => {
@@ -121,7 +127,7 @@ exports.build = build;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.html", gulp.series(html));
 };
 
 exports.default = gulp.series(

@@ -11,6 +11,7 @@
   display: block;
   background-color: transparent;
   border: none;
+  outline: none;
   cursor: pointer;
 
   &:hover {
@@ -31,13 +32,16 @@
 }
 
 .main-nav__icon-menu,
-.main-nav__button--open .main-nav__icon--cross {
-  display: block;
+.main-nav__icon-cross {
+  display: none;
+
+  &--active {
+    display: block;
+  }
 }
 
-.main-nav__icon-cross,
-.main-nav__button--open .main-nav__icon--menu {
-  display: block;
+.main-nav__wrapper--closed {
+  display: none;
 }
 
 .main-nav__list {
@@ -46,9 +50,9 @@
 
 .main-nav__item {
   padding-top: 10px;
-  padding-bottom: 5px;
+  padding-bottom: 6px;
   background-color: @basic-blue;
-  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 1px 0px rgba(1, 1, 1, 0.2), inset 0px 1px 0px rgba(255, 255, 255, 0.2);
   transition: all 0.3s;
 
   &:hover {
