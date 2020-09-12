@@ -12,12 +12,6 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 
-const html = () => {
-  return gulp.src('source/*.html')
-      .pipe(gulp.dest('dist'))
-      .pipe(sync.stream());
-};
-
 // Styles
 
 const styles = () => {
@@ -52,6 +46,15 @@ const server = (done) => {
 };
 
 exports.server = server;
+
+//Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+};
+
+exports.reload = reload;
 
 // Images
 
@@ -94,8 +97,7 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico",
-    "source/*.html"
+    "source/*.ico"
   ], {
     base: "source"
   })
@@ -103,6 +105,15 @@ const copy = () => {
 };
 
 exports.copy = copy;
+
+//HTML
+
+const html = () => {
+  return gulp.src("source/**/*.html")
+    .pipe(gulp.dest("build"));
+};
+
+exports.html = html;
 
 // Clean
 
@@ -117,6 +128,7 @@ exports.clean = clean;
 const build = gulp.series(
   clean,
   copy,
+  html,
   styles,
   sprite
 );
@@ -127,7 +139,7 @@ exports.build = build;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 };
 
 exports.default = gulp.series(
