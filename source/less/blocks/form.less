@@ -1,21 +1,25 @@
 .form {
-  margin-bottom: 48px;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin-bottom: 45px;
 }
 
 .form__item {
   margin: 0;
   padding: 0;
-  padding-top: 20px;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 5px;
   border: none;
+  border-top: 1px solid @basic-grey;
 }
 
 .form__legend {
+  width: 100%;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
   padding-top: 20px;
+  padding-bottom: 19px;
 }
 
 .form__row {
@@ -26,24 +30,37 @@
 }
 
 .form__label {
-  margin-right: 12px;
+  margin-right: 13px;
+  margin-left: 3px;
   font-weight: normal;
   font-size: 14px;
   line-height: 26px;
 }
 
 .form__input {
+  font-family: "PT Sans", "Arial", sans-serif;
   flex-grow: 1;
-  padding-top: 18px;
-  padding-bottom: 14px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+  padding-left: 19px;
   background-color: @special-extra-grey;
-  border: none;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  outline: none;
+  transition: all 0.3s;
+  border: 4px solid @special-extra-grey;
+
+  &:hover {
+    background-color: @basic-grey;
+    border: 4px solid @basic-grey;
+  }
+
+  &:focus {
+    background-color: @basic-white;
+  }
+
   &::placeholder {
-    padding-left: 22px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    text-transform: none;
     color: @basic-black;
   }
 }
@@ -63,6 +80,7 @@
   padding-top: 19px;
   padding-bottom: 14px;
   outline: none;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .form__rule {
@@ -78,8 +96,21 @@
     flex-wrap: wrap;
     margin-left: 60px;
     margin-right: 60px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 67px;
+  }
+
+  .form__item {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  .form__legend {
+    font-size: 21px;
+    padding-top: 32px;
+    padding-bottom: 55px;
   }
 
   .form__legend--active {
@@ -91,18 +122,21 @@
   .form__legend--active::after {
     content: "";
     width: 123px;
-    flex-grow: 1;
-    flex-shrink: 0;
+    margin-top: -4px;
     height: 1px;
     background: @special-light-grey;
   }
 
   .form__legend--active::before {
-    margin-right: 25px;
+    margin-right: auto;
   }
 
   .form__legend--active::after {
-    margin-left: 25px;
+    margin-left: auto;
+  }
+
+  .form__label {
+    margin-left: 0;
   }
 
   .form__footer {
@@ -125,5 +159,12 @@
   .form {
     margin-left: 120px;
     margin-right: 120px;
+    margin-bottom: 72px;
+  }
+
+  .form__legend--active::before,
+  .form__legend--active::after {
+    content: "";
+    width: 280px;
   }
 }

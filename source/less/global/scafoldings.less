@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -17,9 +23,11 @@ img {
 .button {
   background-color: @basic-blue;
   transition: all 0.3s;
+
   &:hover {
     background-color: @basic-dark-blue;
   }
+
   &:active {
     background-color: @special-dark-blue;
   }
@@ -28,6 +36,7 @@ img {
 .button__text {
   color: @basic-white;
   transition: all 0.3s;
+
   &:active {
     opacity: 0.3;
   }
@@ -35,8 +44,13 @@ img {
 
 .button--disabled {
   background-color: @basic-grey;
+
   &:hover,
   &:active {
     background-color: @basic-grey;
   }
+}
+
+.invisible {
+  display: none;
 }

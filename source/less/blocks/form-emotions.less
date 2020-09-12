@@ -1,16 +1,44 @@
 .form-emotions {
   order: 5;
-  width: 100%;
+  padding-bottom: 50px;
 }
 
-.form-emotions__item {}
+.form-emotions__legend {
+  padding-bottom: 15px;
+}
+
+.form-emotions__item {
+  margin: 0;
+}
 
 .form-emotions__input {
-  min-height: 160px;
-  margin-bottom: 51px;
+  min-height: 134px;
+  padding-top: 9px;
+  padding-bottom: 92px;
   resize: none;
 }
 
-@media (min-width: @tablet-width) {}
+@media (min-width: @tablet-width) {
+  .form-emotions {
+    padding: 0;
+    width: 100%;
+    padding-bottom: 58px;
+  }
 
-@media (min-width: @desktop-width) {}
+  .form-emotions__legend {
+    padding-top: 24px;
+    padding-bottom: 54px;
+  }
+
+  .form-emotions__input {
+    min-height: 128px;
+    padding-top: 15px;
+    padding-bottom: 85px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-emotions__legend {
+    padding-top: 22px;
+  }
+}

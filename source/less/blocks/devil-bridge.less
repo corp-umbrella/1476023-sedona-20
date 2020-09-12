@@ -1,10 +1,13 @@
-.devil-bridge {}
+.devil-bridge__item {
+  padding-top: 39px;
+  padding-bottom: 35px;
+}
 
-.devil-bridge__row {}
-
-.devil-bridge__item {}
-
-.devil-bridge__picture {}
+.devil-bridge__picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 @media (min-width: @tablet-width) {
   .devil-bridge {
@@ -17,8 +20,20 @@
 
   .devil-bridge__picture {
     order: 1;
-    width: 66.66%;
   }
 }
 
-@media (min-width: @desktop-width) {}
+@media (min-width: @desktop-width) {
+  .devil-bridge__item {
+    padding-top: 32px;
+  }
+
+  .devil-bridge__description {
+    padding-left: 92px;
+    padding-right: 92px;
+  }
+
+  .devil-bridge img {
+    margin-top: -16px;
+  }
+}
