@@ -18,35 +18,39 @@
   background-color: @basic-blue;
   transition: all 0.3s;
   margin-right: 6px;
+
   &:last-child {
     margin-right: 0;
   }
+
   &:hover {
     background-color: @basic-dark-blue;
   }
+
   &:active {
     background-color: @special-dark-blue;
   }
 }
 
 .social__link {
+  width: 100%;
+  height: 100%;
   transition: all 0.3s;
-  &:active {
-    opacity: 0.3;
-  }
-  /*
-  &--twitter {}
-  &--facebook {}
-  &--youtube {}
-  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.social__icon {}
+.social__item:active .social__link {
+  opacity: 0.3;
+}
+
+.social__icon {
+  color: @basic-white;
+}
 
 @media (min-width: @tablet-width) {
   .social {
     margin-top: 0;
   }
 }
-
-@media (min-width: @desktop-width) {}

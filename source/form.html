@@ -4,13 +4,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/styles.min.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
   <header class="page__header">
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-nav__button" type="button" aria-expanded="false"
+        aria-controls="menu__list">
+        <svg class="main-nav__icon" aria-hidden="true" width="22" height="22">
+          <use class="main-nav__icon-menu" xlink:href="#icon-menu"></use>
+          <use class="main-nav__icon-cross" xlink:href="#icon-cross"></use>
+        </svg>
         <span class="visually-hidden">
           Открыть меню
         </span>
@@ -40,8 +45,14 @@
         </ul>
       </div>
     </nav>
-    <a class="main-nav__logo">
-      <img class="main-nav__image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
+    <a class="main-nav__logo" href="index.html">
+      <picture>
+        <source media="(min-width: 1200px)"
+          srcset="img/logo-sedona-desktop.svg">
+        <source media="(min-width: 768px)"
+          srcset="img/logo-sedona-tablet.svg">
+          <img class="main-nav__image" src="img/logo-sedona-mobile.svg" alt="Логотип города Седона">
+      </picture>
     </a>
   </header>
   <main class="page__main">
@@ -49,16 +60,14 @@
       <h1 class="visually-hidden">
         Седона
       </h1>
-      <section class="main-intro__image intro-image">
-        <div class="intro-image__title">
-          <img src="img/text-sedona-index.svg" width="163" height="35" alt="Welcome to the gorgeous">
-        </div>
+      <section class="main-intro__image main-intro__image--other">
+        <img class="main-intro__picture main-intro__picture--other" src="img/text-sedona.svg" alt="Подпись: Sedona">
       </section>
-      <div class="main-intro__text">
-        <h3 class="main-intro__title">
+      <div class="main-intro__text main-intro__text--form">
+        <h2 class="main-intro__title main-intro__title--other">
           Оставьте свой отзыв
-        </h3>
-        <p class="main-intro__description">
+        </h2>
+        <p class="main-intro__description main-intro__description--form">
           Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </div>
@@ -66,9 +75,9 @@
     <section class="page__form main-form">
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <div class="form__item form-name">
-          <h4 class="form__legend form-name__legend">
+          <h3 class="form__legend form-name__legend">
             Представьтесь:
-          </h4>
+          </h3>
           <div class="form__row form-name__item">
             <label class="form__label" for="appointment-name">
               Имя*:
@@ -92,14 +101,13 @@
           </div>
         </div>
         <div class="form__item form-contacts">
-          <h4 class="form__legend form__legend--active">
+          <h3 class="form__legend form-contacts__legend form__legend--active">
             Контактная информация:
-          </h4>
+          </h3>
           <div class="form__row form-contacts__item">
             <label class="form__label form-contacts__label" for="appointment-tel">
-              <span class="form-contacts__tel">
-                Контактный
-              </span> телефон*:
+              <span class="form-contacts__tel form-contacts__tel--mobile">Контактный телефон*</span>
+              <span class="form-contacts__tel form-contacts__tel--desktop">Телефон*</span>
             </label>
             <div class="form-contacts__phone">
               <input class="form__input form-contacts__input form-contacts__input--phone" id="appointment-tel" type="text" name="phone" required
@@ -117,9 +125,9 @@
           </div>
         </div>
         <div class="form__item form-impression">
-          <h4 class="form__legend form-impression__legend">
+          <h3 class="form__legend form-impression__legend">
             Ваше общее впечатление:
-          </h4>
+          </h3>
           <ul class="form-impression__list">
             <li class="form__row form-impression__item">
               <input class="form__input visually-hidden form-impression__radio" type="radio" name="impression"
@@ -145,9 +153,9 @@
           </ul>
         </div>
         <div class="form__item form-attractions">
-          <h4 class="form__legend form__legend--active">
-            Посещенные достопримечательности:
-          </h4>
+          <h3 class="form__legend form-attractions__legend form__legend--active">
+            Посещенные<br> достопримечательности:
+          </h3>
           <ul class="form-attractions__list">
             <li class="form__row form-attractions__item">
               <input class="form__input visually-hidden form-attractions__checkbox" type="checkbox" name="devils-bridge"
@@ -180,9 +188,9 @@
           </ul>
         </div>
         <div class="form__item form-emotions">
-          <h4 class="form__legend form__legend--active">
+          <h3 class="form__legend form-emotions__legend form__legend--active">
             Опишите свои эмоции:
-          </h4>
+          </h3>
           <div class="form__row form-emotions__item">
             <textarea class="form__input form-emotions__input" type="text" name="emotions"
               placeholder="Опишите подробно все свои восторги"></textarea>
@@ -200,32 +208,30 @@
         </div>
       </form>
     </section>
-    <!-- Чтобы увидеть мопапы, надо вместо hidden вставить show -->
-    <section class="modal__success modal__hidden">
-      <h3 class="modal__title">
+    <section class="modal modal--success">
+      <h2 class="modal__title">
         Ваш отзыв отправлен!
-      </h3>
+      </h2>
       <p class="modal__description">
         Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.
       </p>
       <div class="modal__close">
-        <button class="button modal__button">
-          <span class="button__text">
+        <button class="button modal__button modal__button--success" type="button">
+          <span class="button__text modal__button-text">
             Закрыть окно
           </span>
         </button>
       </div>
     </section>
-    <!-- Чтобы увидеть мопапы, надо вместо hidden вставить show -->
-    <section class="modal__failure modal__hidden">
-      <h3 class="modal__title">
+    <section class="modal modal--failure">
+      <h2 class="modal__title">
         Что-то пошло не так!
-      </h3>
-      <p class="modal__description">
+      </h2>
+      <p class="modal__description modal__description--failure">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="button modal__button">
-        <span class="button__text">
+      <button class="button modal__button modal__button--failure" type="button">
+        <span class="button__text modal__button-text">
           Ок
         </span>
       </button>
@@ -240,17 +246,23 @@
         <ul class="social__list">
           <li class="social__item">
             <a class="social__link social__link--twitter" href="#" aria-label="Седона в Твиттере">
-              <img class="social__icon" src="img/icon-twitter.svg">
+              <svg class="social__icon" width="18" height="15">
+                <use xlink:href="#icon-twitter"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="#" aria-label="Седона в Фейсбуке">
-              <img class="social__icon" src="img/icon-facebook.svg">
+              <svg class="social__icon" width="9" height="19">
+                <use xlink:href="#icon-facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--youtube" href="#" aria-label="Седона в Ютубе">
-              <img class="social__icon" src="img/icon-youtube.svg">
+              <svg class="social__icon" width="20" height="14">
+                <use xlink:href="#icon-youtube"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -258,7 +270,9 @@
       <div class="main-footer__copyright copyright">
         <b class="copyright__text">Разработано</b>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-          <img class="copyright__icon" src="img/logo-htmlacademy.svg">
+          <svg class="copyright__icon" width="27" height="35">
+            <use xlink:href="#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </div>
