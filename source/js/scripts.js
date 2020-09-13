@@ -7,7 +7,7 @@ var modalSuccess = document.querySelector(".modal-success");
 var modalFailureButton = document.querySelector(".modal__button--failure");
 var modalSuccessButton = document.querySelector(".modal__button--success");
 
-navMainList.classList.remove('.main-nav__wrapper--open');
+navMainList.classList.remove("main-nav__wrapper--open");
 
 (() => {
   const menuButton = document.querySelector(".main-nav__button");
