@@ -96,7 +96,6 @@
 
   .gallery__text {
     display: flex;
-    flex-wrap: wrap;
     background-color: @special-extra-grey;
     justify-content: space-between;
     padding-top: 15px;
@@ -110,7 +109,8 @@
   .gallery__info {
     margin-left: 20px;
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    width: 60%;
   }
 
   .gallery__rating {

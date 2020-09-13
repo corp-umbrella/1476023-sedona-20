@@ -44,7 +44,11 @@
 }
 
 .main-nav__wrapper {
-  display: none;
+  display: block;
+
+  &--closed {
+    display: none;
+  }
 
   &--open {
     display: block;
@@ -82,12 +86,6 @@
   &:active {
     opacity: 0.3;
   }
-}
-
-.main-nav__logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -148,10 +146,6 @@
     &:active {
       color: @basic-brown;
     }
-  }
-
-  .main-nav__logo {
-    top: 0;
   }
 }
 
